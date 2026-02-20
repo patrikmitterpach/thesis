@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WIP Chapters/Outline.md",
+                "file": "WIP Chapters/02. Observability.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Outline"
+              "title": "02. Observability"
             }
           },
           {
@@ -208,11 +208,11 @@
   },
   "active": "fa150057471aacef",
   "lastOpenFiles": [
+    "WIP Chapters/01. Introduction.md",
+    "WIP Chapters/Outline.md",
     "~WRL1652.tmp",
     "~WRD1636.tmp",
     "WIP Chapters/02. Observability.md",
-    "WIP Chapters/01. Introduction.md",
-    "WIP Chapters/Outline.md",
     "Notes/Recommendations.md",
     "Notes/Otázky ku práci.md",
     "~$tterpach_bp_en.docx",
@@ -226,7 +226,6 @@
     "README.md",
     "WIP Chapters",
     "Notes",
-    "Welcome.md",
-    "LICENSE"
+    "Welcome.md"
   ]
 }
