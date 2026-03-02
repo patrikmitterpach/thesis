@@ -1,6 +1,7 @@
 {
   "cssTheme": "Minimal",
   "theme": "moonstone",
-  "interfaceFontFamily": "Inter",
-  "textFontFamily": "Inter"
+  "interfaceFontFamily": "SF Pro DIsplay,Inter",
+  "textFontFamily": "SF Pro Display,Inter",
+  "baseFontSize": 13
 }
