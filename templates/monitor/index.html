@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Reports received{% endblock %}</h1>
+{% if g.user %}
+<a class="action" href="{{ url_for('monitor.create') }}">New</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+    <table>
+    <tbody>
+        
+    {% for post in posts %}
+    <tr>    
+        <td>{{ post['id'] }}</td>
+        <td>{{ post['source'] }}</td>
+        <td>{{ post['created'] }}</td>
+        <td>{{ post['returnCode'] }}</td>
+        <td>{{ post['fileType'] }}</td>
+        <td>{{ post['body'] }}</td>
+
+    </tr>
+    {% if not loop.last %}    
+    {% endif %}
+    {% endfor %}
+
+    </tbody>
+</table>
+{% endblock %}
