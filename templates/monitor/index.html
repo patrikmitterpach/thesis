@@ -8,7 +8,18 @@
 {% endblock %}
 
 {% block content %}
+<br>
     <table>
+    <thead>
+    <tr>  
+        <td style="width: 2em;">ID</td>
+        <td>Source</td>
+        <td>Created</td>
+        <td style="width: 5em;">returnCode</td>
+        <td style="width: 5em;">fileType</td>
+        <td>View Full</td>
+    </tr>
+    </thead>
     <tbody>
         
     {% for post in posts %}
@@ -19,7 +30,6 @@
         <td>{{ post['returnCode'] }}</td>
         <td>{{ post['fileType'] }}</td>
         <td>{{ post['body'] }}</td>
-
     </tr>
     {% if not loop.last %}    
     {% endif %}

@@ -5,6 +5,8 @@ from flask import Flask
 from source import database
 from source import authentication
 from source import monitor
+from source import input
+
 
 
 
@@ -28,9 +30,11 @@ def create_app(test_config=None):
     database.init_app(app)
 
     app.register_blueprint(authentication.bp)
-
     app.register_blueprint(monitor.bp)
+    app.register_blueprint(input.bp)
+
     app.add_url_rule('/', endpoint='index')
+
 
 
     return app

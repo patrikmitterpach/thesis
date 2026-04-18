@@ -16,7 +16,6 @@ def index():
         ' FROM report p ORDER BY created DESC'
     ).fetchall()
     
-    print(posts)
     return render_template('monitor/index.html', posts=posts)
 
 # @bp.route('/create', methods=('GET', 'POST'))
