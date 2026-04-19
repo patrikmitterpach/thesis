@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  {% if report['fileType'] == "text/json" %}
+                    <img src="{{ url_for('static', filename='json-icon.png') }}" class="page-icon">
+                {% else %}
+                    <img src="{{ url_for('static', filename='xml-icon.png') }}" class="page-icon">
+                {% endif %}
+                 <h1>{% block title %}Viewing report #{{ report['id'] }}{% endblock %}</h1> 
+<br><br>
+  {% endblock %}
+{% block content %}
+  <p><b>Source</b>: <a href="{{ report['source'] }}">{{ report['source'] }}</a></p>
+  <p><b>Created</b>: {{ report['created'] }}</p>
+  <p><b>Filetype</b>: {{ report['fileType'] }}</p>
+  <p><b>Contents</b>:
+    <pre style="white-space:pre-wrap;" id="json">{{ report['fullBody'] }}</pre>
+  </p>
+
+{% endblock %}

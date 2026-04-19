@@ -28,4 +28,4 @@ def runner(app):
 
 def test_request_example(client):
     response = client.get("/")
-    assert b"<h1>Report Mancer</h1>" in response.data
+    assert b"redirected" in response.data

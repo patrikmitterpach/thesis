@@ -2,22 +2,18 @@
 
 {% block header %}
 <h1>{% block title %}Reports received{% endblock %}</h1>
-{% if g.user %}
-<a class="action" href="{{ url_for('monitor.create') }}">New</a>
-{% endif %}
 {% endblock %}
 
 {% block content %}
 <br>
     <table>
     <thead>
-    <tr>  
+    <tr style="font-weight: bold;">  
         <td style="width: 2em;">ID</td>
-        <td>Source</td>
-        <td>Created</td>
-        <td style="width: 5em;">returnCode</td>
+        <td style="text-align: start;">Source</td>
+        <td style="width: 12em;">Created</td>
         <td style="width: 5em;">fileType</td>
-        <td>View Full</td>
+        <td style="width: 4em;">Details</td>
     </tr>
     </thead>
     <tbody>
@@ -25,14 +21,23 @@
     {% for post in posts %}
     <tr>    
         <td>{{ post['id'] }}</td>
-        <td>{{ post['source'] }}</td>
+        <td style="text-align: start;">
+            <a href="{{ post['source'] }}">
+                {{ post['source'] }}
+            </a>
+        </td>
         <td>{{ post['created'] }}</td>
-        <td>{{ post['returnCode'] }}</td>
         <td>{{ post['fileType'] }}</td>
-        <td>{{ post['body'] }}</td>
+        <td>
+            <a href="{{ post['id'] }}">
+                {% if post['fileType'] == "text/json" %}
+                    <img src="{{ url_for('static', filename='json-icon.png') }}" class="page-icon">
+                {% else %}
+                    <img src="{{ url_for('static', filename='xml-icon.png') }}" class="page-icon">
+                {% endif %}
+            </a>
+        </td>
     </tr>
-    {% if not loop.last %}    
-    {% endif %}
     {% endfor %}
 
     </tbody>

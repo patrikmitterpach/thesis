@@ -6,7 +6,7 @@ hr { border: none; border-top: 1px solid #e8eaed; }
 nav { background: #1a1d23; display: flex; align-items: center; padding: 0 1rem; }
 nav h1 { flex: auto; margin: 0; color: #ffffff; }
 nav h1 a { text-decoration: none; padding: 0.25rem 0.5rem; }
-nav ul  { display: flex; list-style: none; margin: 0; padding: 0; }
+nav ul  { display: flex; list-style: none; margin: 0; }
 nav ul li a, nav ul li span, header .action { display: block; padding: 0.75rem; font-size: 0.875rem; color: #a8b0c0; }
 .content { padding: 0 1.5rem 1.5rem; }
 .content > header { border-bottom: 1px solid #e8eaed; display: flex; align-items: flex-end; }
@@ -26,6 +26,9 @@ input.danger { color: #dc2626; }
 input[type=submit] { align-self: start; min-width: 10em; background: #4f46e5; color: #fff; border: none; border-radius: 6px; padding: 0.5rem 1.25rem; font-weight: 500; cursor: pointer; }
 
 .icon {padding: 1rem 1rem 1rem; border-radius: 1.2rem; max-width: 3em;}
+.page-icon {align-content: center;  display: block; max-width: 2em; max-height: 2em; display: block;
+    margin: 0 auto;}
+
 
 table {
 	display: table;
@@ -71,7 +74,6 @@ th,
 td {
   border: 1px solid lightgrey;
   padding: 0.25rem 0.75rem;
-  vertical-align: baseline;
 }
 
 th:first-child {
